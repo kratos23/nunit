@@ -484,7 +484,7 @@ dotnet_diagnostic.SA1609.severity = none
 dotnet_diagnostic.SA1610.severity = none
 
 # Element parameters should be documented
-dotnet_diagnostic.SA1611.severity = none
+dotnet_diagnostic.SA1611.severity = warning
 
 # Element parameter documentation should match element parameters
 dotnet_diagnostic.SA1612.severity = none
