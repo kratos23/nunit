@@ -157,6 +157,21 @@ namespace NUnit.Framework.Tests.Internal
         }
 
         [Test]
+        public void FixtureUsingEnableIfIsDisabled()
+        {
+            TestSuite suite = TestBuilder.MakeFixture(typeof(FixtureUsingEnabledIfAttributeFalseCondition));
+            Assert.That(suite.RunState, Is.EqualTo(RunState.Skipped));
+            Assert.That(suite.Properties.Get(PropertyNames.SkipReason), Is.EqualTo("Test was skipped with EnabledIf attribute"));
+        }
+
+        [Test]
+        public void FixtureUsingEnableIfIsEnabled()
+        {
+            TestSuite suite = TestBuilder.MakeFixture(typeof(FixtureUsingEnabledIfAttributeTrueCondition));
+            Assert.That(suite.RunState, Is.EqualTo(RunState.Runnable));
+        }
+
+        [Test]
         public void FixtureUsingIgnoreReasonPropertyIsIgnored()
         {
             TestSuite suite = TestBuilder.MakeFixture(typeof(FixtureUsingIgnoreReasonProperty));
