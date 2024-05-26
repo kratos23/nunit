@@ -42,7 +42,8 @@
     <PackageReference Include="IsExternalInit" PrivateAssets="all" />
     <PackageReference Include="Nullable" PrivateAssets="all" />
     <PackageReference Include="CSharpIsNullAnalyzer" PrivateAssets="all" />
-  </ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" PrivateAssets="all" />
+  </ItemGroup> 
 
   <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" PrivateAssets="all" />

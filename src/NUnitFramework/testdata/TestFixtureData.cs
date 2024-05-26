@@ -196,6 +196,26 @@ namespace NUnit.TestData.TestFixtureTests
         }
     }
 
+    [TestFixture]
+    [EnableIf("2 == 3")]
+    public class FixtureUsingEnabledIfAttributeFalseCondition
+    {
+        [Test]
+        public void Success()
+        {
+        }
+    }
+
+    [TestFixture]
+    [EnableIf("2 * 2 == 4")]
+    public class FixtureUsingEnabledIfAttributeTrueCondition
+    {
+        [Test]
+        public void Success()
+        {
+        }
+    }
+
     [TestFixture(Ignore = "testing ignore a fixture")]
     public class FixtureUsingIgnoreProperty
     {
